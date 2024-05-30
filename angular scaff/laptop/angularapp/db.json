@@ -1,0 +1,34 @@
+{
+  "laptops": [
+    {
+      "id": 1,
+      "brand": "Brand A",
+      "model": "Model X",
+      "screenSize": 15.6,
+      "ram": 8,
+      "storage": 512,
+      "processor": "Intel Core i5",
+      "graphicsCard": "Nvidia GeForce GTX 1650"
+    },
+    {
+      "id": 2,
+      "brand": "Brand B",
+      "model": "Model Y",
+      "screenSize": 13.3,
+      "ram": 16,
+      "storage": 256,
+      "processor": "Intel Core i7",
+      "graphicsCard": "Intel Iris Xe"
+    },
+    {
+      "brand": "lenovo",
+      "model": "doc",
+      "screenSize": 13,
+      "ram": 12,
+      "storage": 123,
+      "processor": "g18",
+      "graphicsCard": "gtx",
+      "id": 3
+    }
+  ]
+}

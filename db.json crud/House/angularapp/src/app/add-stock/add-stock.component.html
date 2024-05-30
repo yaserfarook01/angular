@@ -1,0 +1,26 @@
+<!-- add-stock.component.html -->
+
+<form [formGroup]="stockForm" (ngSubmit)="addNewStock()" class="add-stock-form">
+    <div class="form-group">
+      <label for="symbol">Symbol:</label>
+      <input class="form-control" type="text" placeholder="Enter stock symbol" formControlName="symbol">
+      <div *ngIf="stockForm.get('symbol')!.invalid && stockForm.get('symbol')!.touched">
+        <div *ngIf="stockForm.get('symbol')!.hasError('required')">Stock symbol is required.</div>
+        <div *ngIf="stockForm.get('symbol')!.hasError('maxlength')">Stock symbol should not exceed 10 characters.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="companyName">Company Name:</label>
+      <input class="form-control" type="text" placeholder="Enter company name" formControlName="companyName">
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input class="form-control" type="number" placeholder="Enter stock price" formControlName="price">
+    </div>
+    <div class="form-group">
+      <label for="change">Change:</label>
+      <input class="form-control" type="text" placeholder="Enter stock change" formControlName="change">
+    </div>
+    <button class="btn btn-primary submit-button" type="submit" [disabled]="stockForm.invalid">Add Stock</button>
+  </form>
+  

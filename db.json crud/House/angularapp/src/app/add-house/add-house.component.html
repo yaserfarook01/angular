@@ -1,0 +1,62 @@
+<!-- <p>add-house works!</p> -->
+<form [formGroup]="houseForm" (ngSubmit)="addNewHouse()">
+    <table>
+        <tr>
+            <td>Address:</td>
+            <td><input class="form-control" type="text" placeholder="Enter house address" formControlName="address"></td>
+            <div *ngIf="houseForm.get('address')!.invalid && houseForm.get('address')!.touched">
+                <div *ngIf="houseForm.get('address')!.hasError('required')">House address is required.</div>
+                <div *ngIf="houseForm.get('address')!.hasError('maxlength')">House address should not exceed 75 characters.</div>
+            </div>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td><input class="form-control" type="text" placeholder="Enter house type" formControlName="type"></td>
+            <div *ngIf="houseForm.get('type')!.invalid && houseForm.get('type')!.touched">
+                <div *ngIf="houseForm.get('type')!.hasError('required')">House type is required.</div>
+            </div>
+        </tr>
+        <tr>
+            <td>Year Built:</td>
+            <td><input class="form-control" type="number" placeholder="Enter year built" formControlName="yearBuilt"></td>
+            <div *ngIf="houseForm.get('yearBuilt')!.invalid && houseForm.get('yearBuilt')!.touched">
+                <div *ngIf="houseForm.get('yearBuilt')!.hasError('required')">Year built is required.</div>
+            </div>
+        </tr>
+        <tr>
+            <td>Color:</td>
+            <td><input class="form-control" type="text" placeholder="Enter house color" formControlName="color"></td>
+            <div *ngIf="houseForm.get('color')!.invalid && houseForm.get('color')!.touched">
+                <div *ngIf="houseForm.get('color')!.hasError('required')">House color is required.</div>
+            </div>
+        </tr>
+        <tr>
+            <td>Size (sq ft):</td>
+            <td><input class="form-control" type="number" placeholder="Enter house size" formControlName="size"></td>
+            <div *ngIf="houseForm.get('size')!.invalid && houseForm.get('size')!.touched">
+                <div *ngIf="houseForm.get('size')!.hasError('required')">House size is required.</div>
+            </div>
+        </tr>
+        <!-- Add the bedrooms input field -->
+        <tr>
+            <td>Bedrooms:</td>
+            <td><input class="form-control" type="number" placeholder="Enter number of bedrooms" formControlName="bedrooms"></td>
+            <div *ngIf="houseForm.get('bedrooms')!.invalid && houseForm.get('bedrooms')!.touched">
+                <div *ngIf="houseForm.get('bedrooms')!.hasError('required')">Number of bedrooms is required.</div>
+            </div>
+        </tr>
+        <!-- Add the bathrooms input field -->
+        <tr>
+            <td>Bathrooms:</td>
+            <td><input class="form-control" type="number" placeholder="Enter number of bathrooms" formControlName="bathrooms"></td>
+            <div *ngIf="houseForm.get('bathrooms')!.invalid && houseForm.get('bathrooms')!.touched">
+                <div *ngIf="houseForm.get('bathrooms')!.hasError('required')">Number of bathrooms is required.</div>
+            </div>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" type="submit" [disabled]="houseForm.invalid">Add House</button>
+            </td>
+        </tr>
+    </table>
+</form>

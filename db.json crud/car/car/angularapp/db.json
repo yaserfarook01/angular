@@ -1,0 +1,36 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "model": "Model S",
+      "make": "Tesla",
+      "year": 2022,
+      "color": "Red",
+      "mileage": 15000
+    },
+    {
+      "id": 2,
+      "model": "Civic",
+      "make": "Honda",
+      "year": 2019,
+      "color": "Blue",
+      "mileage": 30000
+    },
+    {
+      "id": 3,
+      "model": "Camry",
+      "make": "Toyota",
+      "year": 2018,
+      "color": "White",
+      "mileage": 25000
+    },
+    {
+      "model": "x",
+      "make": "tesla",
+      "year": 2022,
+      "color": "black",
+      "mileage": 45,
+      "id": 4
+    }
+  ]
+}

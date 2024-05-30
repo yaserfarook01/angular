@@ -1,0 +1,26 @@
+<!-- movie-list.component.html -->
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Director</th>
+      <th>Release Date</th>
+      <th>Genre</th>
+      <th>Rating</th>
+      <!-- Include a column for Delete button if needed -->
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Iterate through the list of movies -->
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.title }}</td>
+      <td>{{ movie.director }}</td>
+      <td>{{ movie.releaseDate | date: 'shortDate' }}</td>
+      <td>{{ movie.genre }}</td>
+      <td>{{ movie.rating }}</td>
+      <!-- Include a cell for Delete button if needed -->
+      <td><button (click)="deleteMovie(movie.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>

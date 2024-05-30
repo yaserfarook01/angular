@@ -1,0 +1,45 @@
+<form [formGroup]="movieForm" (ngSubmit)="addNewMovie()">
+  <table>
+    <tr>
+      <td>Title:</td>
+      <td><input class="form-control" type="text" placeholder="Enter title" formControlName="title"></td>
+      <div *ngIf="movieForm.get('title')!.invalid && movieForm.get('title')!.touched">
+        <div *ngIf="movieForm.get('title')!.hasError('required')">Title is required.</div>
+      </div>
+    </tr>
+    <tr>
+      <td>Director:</td>
+      <td><input class="form-control" type="text" placeholder="Enter director" formControlName="director"></td>
+      <div *ngIf="movieForm.get('director')!.invalid && movieForm.get('director')!.touched">
+        <div *ngIf="movieForm.get('director')!.hasError('required')">Director is required.</div>
+      </div>
+    </tr>
+    <tr>
+      <td>Release Date:</td>
+      <td><input class="form-control" type="date" placeholder="Enter release date" formControlName="releaseDate"></td>
+      <div *ngIf="movieForm.get('releaseDate')!.invalid && movieForm.get('releaseDate')!.touched">
+        <div *ngIf="movieForm.get('releaseDate')!.hasError('required')">Release Date is required.</div>
+      </div>
+    </tr>
+    <tr>
+      <td>Genre:</td>
+      <td><input class="form-control" type="text" placeholder="Enter genre" formControlName="genre"></td>
+      <div *ngIf="movieForm.get('genre')!.invalid && movieForm.get('genre')!.touched">
+        <div *ngIf="movieForm.get('genre')!.hasError('required')">Genre is required.</div>
+      </div>
+    </tr>
+    <tr>
+      <td>Rating:</td>
+      <td><input class="form-control rating-input" type="number" placeholder="Enter rating (1-10)" formControlName="rating" min="1" max="10"></td>
+      <div *ngIf="movieForm.get('rating')!.invalid && movieForm.get('rating')!.touched">
+        <div *ngIf="movieForm.get('rating')!.hasError('required')">Rating is required.</div>
+        <div *ngIf="movieForm.get('rating')!.hasError('min') || movieForm.get('rating')!.hasError('max')">Rating must be between 1 and 10.</div>
+      </div>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button class="btn btn-danger" type="submit" [disabled]="movieForm.invalid">Add Movie</button>
+      </td>
+    </tr>
+  </table>
+</form>

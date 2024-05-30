@@ -1,0 +1,32 @@
+{
+  "stocks": [
+    {
+      "id": 1,
+      "symbol": "AAPL",
+      "companyName": "Apple Inc.",
+      "price": 145.12,
+      "change": "+2.45"
+    },
+    {
+      "id": 2,
+      "symbol": "GOOGL",
+      "companyName": "Alphabet Inc.",
+      "price": 2745.89,
+      "change": "-10.32"
+    },
+    {
+      "id": 3,
+      "symbol": "MSFT",
+      "companyName": "Microsoft Corporation",
+      "price": 250.43,
+      "change": "+1.20"
+    },
+    {
+      "symbol": "ONG",
+      "companyName": "Natural ",
+      "price": 12,
+      "change": "2",
+      "id": 4
+    }
+  ]
+}

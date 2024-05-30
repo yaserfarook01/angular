@@ -1,0 +1,42 @@
+<form [formGroup]="laptopForm" (ngSubmit)="addNewLaptop()" class="add-laptop-form">
+    <div class="form-group">
+        <label for="brand">Brand:</label>
+        <input class="form-control" type="text" placeholder="Enter laptop brand" formControlName="brand">
+        <div *ngIf="laptopForm.get('brand')!.invalid && laptopForm.get('brand')!.touched">
+            <div *ngIf="laptopForm.get('brand')!.hasError('required')">Laptop brand is required.</div>
+            <div *ngIf="laptopForm.get('brand')!.hasError('maxlength')">Laptop brand should not exceed 50 characters.</div>
+        </div>
+    </div>
+    <!-- Add more form fields for laptop details -->
+    <div class="form-group">
+        <label for="model">Model:</label>
+        <input class="form-control" type="text" placeholder="Enter laptop model" formControlName="model">
+        <!-- Add validation messages -->
+    </div>
+    <div class="form-group">
+        <label for="screenSize">Screen Size (inches):</label>
+        <input class="form-control" type="number" placeholder="Enter screen size" formControlName="screenSize">
+        <!-- Add validation messages -->
+    </div>
+    <div class="form-group">
+        <label for="ram">RAM (GB):</label>
+        <input class="form-control" type="number" placeholder="Enter RAM size" formControlName="ram">
+        <!-- Add validation messages -->
+    </div>
+    <div class="form-group">
+        <label for="storage">Storage (GB):</label>
+        <input class="form-control" type="number" placeholder="Enter storage size" formControlName="storage">
+        <!-- Add validation messages -->
+    </div>
+    <div class="form-group">
+        <label for="processor">Processor:</label>
+        <input class="form-control" type="text" placeholder="Enter processor details" formControlName="processor">
+        <!-- Add validation messages -->
+    </div>
+    <div class="form-group">
+        <label for="graphicsCard">Graphics Card:</label>
+        <input class="form-control" type="text" placeholder="Enter graphics card details" formControlName="graphicsCard">
+        <!-- Add validation messages -->
+    </div>
+    <button class="btn btn-primary submit-button" type="submit" [disabled]="laptopForm.invalid">Add Laptop</button>
+</form>

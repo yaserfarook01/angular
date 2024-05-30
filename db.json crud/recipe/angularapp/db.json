@@ -1,0 +1,28 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Pasta Carbonara",
+      "ingredients": "Spaghetti, eggs, pancetta, pecorino cheese, black pepper",
+      "instructions": "Boil the spaghetti. In a separate pan, cook the pancetta. Mix the eggs and cheese. Combine all ingredients and season with pepper.",
+      "prepTime": "15",
+      "cookTime": "20"
+    },
+    {
+      "id": 2,
+      "name": "Chicken Curry",
+      "ingredients": "Chicken, onions, tomatoes, garlic, curry powder, coconut milk",
+      "instructions": "Sauté onions and garlic. Add chicken and cook until golden brown. Add tomatoes and curry powder. Pour in coconut milk and simmer until chicken is cooked.",
+      "prepTime": "20",
+      "cookTime": "30"
+    },
+    {
+      "name": "13",
+      "ingredients": "r",
+      "instructions": "r",
+      "prepTime": 1,
+      "cookTime": 12,
+      "id": 3
+    }
+  ]
+}

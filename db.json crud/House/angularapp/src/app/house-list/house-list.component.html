@@ -1,0 +1,26 @@
+<table>
+    <thead>
+      <tr>
+        <th>House Number</th>
+        <th>Address</th>
+        <th>Type</th>
+        <th>Bedrooms</th>
+        <th>Bathrooms</th>
+        <th>Size</th>
+        <!-- Include a column for Delete button if needed -->
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let house of houses">
+        <td>{{ house.id }}</td>
+        <td>{{ house.address }}</td>
+        <td>{{ house.type }}</td>
+        <td>{{ house.bedrooms }}</td>
+        <td>{{ house.bathrooms }}</td>
+        <td>{{ house.size }}</td>
+        <!-- Include a cell for Delete button if needed -->
+        <td><button (click)="deleteHouse(house.id)">Delete</button></td>
+      </tr>
+    </tbody>
+</table>

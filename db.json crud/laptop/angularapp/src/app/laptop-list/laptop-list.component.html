@@ -1,0 +1,32 @@
+<div class="laptop-list-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Laptop ID</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Screen Size (inches)</th>
+                <th>RAM (GB)</th>
+                <th>Storage (GB)</th>
+                <th>Processor</th>
+                <th>Graphics Card</th>
+                <!-- Include a column for Delete button if needed -->
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let laptop of laptops">
+                <td>{{ laptop.id }}</td>
+                <td>{{ laptop.brand }}</td>
+                <td>{{ laptop.model }}</td>
+                <td>{{ laptop.screenSize }}</td>
+                <td>{{ laptop.ram }}</td>
+                <td>{{ laptop.storage }}</td>
+                <td>{{ laptop.processor }}</td>
+                <td>{{ laptop.graphicsCard }}</td>
+                <!-- Include a cell for Delete button if needed -->
+                <td><button (click)="deleteLaptop(laptop.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,43 @@
+/* add-movie.component.css */
+
+/* Style the add movie form */
+.add-movie-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Style the submit button */
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.rating-input {
+  width: 150px; /* Adjust the width as desired */
+}

@@ -1,0 +1,45 @@
+<form [formGroup]="carForm" (ngSubmit)="addNewCar()">
+    <table>
+        <tr>
+            <td>Model:</td>
+            <td><input class="form-control" type="text" placeholder="Enter car model" formControlName="model"></td>
+            <div *ngIf="carForm.get('model')!.invalid && carForm.get('model')!.touched">
+                <div *ngIf="carForm.get('model')!.hasError('required')">Car model is required.</div>
+                <div *ngIf="carForm.get('model')!.hasError('maxlength')">Car model should not exceed 75 characters.</div>
+            </div>
+        </tr>
+        <tr>
+            <td>Make:</td>
+            <td><input class="form-control" type="text" placeholder="Enter car make" formControlName="make"></td>
+            <div *ngIf="carForm.get('make')!.invalid && carForm.get('make')!.touched">
+                <div *ngIf="carForm.get('make')!.hasError('required')">Car make is required.</div>
+            </div>
+        </tr>
+        <tr>
+            <td>Year:</td>
+            <td><input class="form-control" type="number" placeholder="Enter car year" formControlName="year"></td>
+            <div *ngIf="carForm.get('year')!.invalid && carForm.get('year')!.touched">
+                <div *ngIf="carForm.get('year')!.hasError('required')">Car year is required.</div>
+            </div>
+        </tr>
+        <tr>
+            <td>Color:</td>
+            <td><input class="form-control" type="text" placeholder="Enter car color" formControlName="color"></td>
+            <div *ngIf="carForm.get('color')!.invalid && carForm.get('color')!.touched">
+                <div *ngIf="carForm.get('color')!.hasError('required')">Car color is required.</div>
+            </div>
+        </tr>
+        <tr>
+            <td>Mileage:</td>
+            <td><input class="form-control" type="number" placeholder="Enter car mileage" formControlName="mileage"></td>
+            <div *ngIf="carForm.get('mileage')!.invalid && carForm.get('mileage')!.touched">
+                <div *ngIf="carForm.get('mileage')!.hasError('required')">Car mileage is required.</div>
+            </div>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-danger" type="submit" [disabled]="carForm.invalid">Add Car</button>
+            </td>
+        </tr>
+    </table>
+</form>

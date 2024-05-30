@@ -1,0 +1,45 @@
+<form [formGroup]="recipeForm" (ngSubmit)="addNewRecipe()">
+    <table>
+      <tr>
+        <td>Recipe Name:</td>
+        <td><input class="form-control" type="text" placeholder="Enter recipe name" formControlName="name"></td>
+        <div *ngIf="recipeForm.get('name')!.invalid && recipeForm.get('name')!.touched">
+          <div *ngIf="recipeForm.get('name')!.hasError('required')">Recipe name is required.</div>
+        </div>  
+      </tr>
+      <tr>
+        <td>Ingredients:</td>
+        <td><textarea class="form-control" placeholder="Enter ingredients" formControlName="ingredients"></textarea></td>
+        <div *ngIf="recipeForm.get('ingredients')!.invalid && recipeForm.get('ingredients')!.touched">
+          <div *ngIf="recipeForm.get('ingredients')!.hasError('required')">Ingredients are required.</div>
+        </div>
+      </tr>
+      <tr>
+        <td>Instructions:</td>
+        <td><textarea class="form-control" placeholder="Enter instructions" formControlName="instructions"></textarea></td>
+        <div *ngIf="recipeForm.get('instructions')!.invalid && recipeForm.get('instructions')!.touched">
+          <div *ngIf="recipeForm.get('instructions')!.hasError('required')">Instructions are required.</div>
+        </div>
+      </tr>
+      <tr>
+        <td>Preparation Time (minutes):</td>
+        <td><input class="form-control" type="number" placeholder="Enter preparation time" formControlName="prepTime"></td>
+        <div *ngIf="recipeForm.get('prepTime')!.invalid && recipeForm.get('prepTime')!.touched">
+          <div *ngIf="recipeForm.get('prepTime')!.hasError('required')">Preparation time is required.</div>
+        </div>  
+      </tr>
+      <tr>
+        <td>Cooking Time (minutes):</td>
+        <td><input class="form-control" type="number" placeholder="Enter cooking time" formControlName="cookTime"></td>
+        <div *ngIf="recipeForm.get('cookTime')!.invalid && recipeForm.get('cookTime')!.touched">
+          <div *ngIf="recipeForm.get('cookTime')!.hasError('required')">Cooking time is required.</div>
+        </div>  
+      </tr>
+      <tr>
+        <td colspan="2">
+            <button class="btn btn-danger" type="submit" [disabled]="recipeForm.invalid">Add Recipe</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  

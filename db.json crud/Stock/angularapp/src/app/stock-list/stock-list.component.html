@@ -1,0 +1,29 @@
+<!-- stock-list.component.html -->
+
+<div class="stock-list-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Stock ID</th>
+          <th>Symbol</th>
+          <th>Company Name</th>
+          <th>Price</th>
+          <th>Change</th>
+          <!-- Include a column for Delete button if needed -->
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of stocks">
+          <td>{{ stock.id }}</td>
+          <td>{{ stock.symbol }}</td>
+          <td>{{ stock.companyName }}</td>
+          <td>{{ stock.price }}</td>
+          <td>{{ stock.change }}</td>
+          <!-- Include a cell for Delete button if needed -->
+          <td><button (click)="deleteStock(stock.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
